@@ -5,7 +5,8 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(example.com www.example.com)
+# FIXME: Avoid allow the domain name to be passed via the command-line
+domains=(open-event-server.casapu.pro)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="" # Adding a valid address is strongly recommended
