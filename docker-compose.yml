@@ -29,3 +29,7 @@ services:
   frontend:
     build:
       context: ../frontend
+
+  web:
+    build:
+      context: ../server
