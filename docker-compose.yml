@@ -15,7 +15,7 @@ services:
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     links:
       - frontend:frontend
-      # Refer to the 'web' defined in another compose file as 'backend'
+      # Refer to the 'web' container defined in another compose file by the hostname 'backend'
       - web:backend
 
   certbot:
